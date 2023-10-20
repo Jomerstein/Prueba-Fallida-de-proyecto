@@ -24,7 +24,7 @@ namespace WebApplicationPrueba.Models
             for(int i = 0; i < 30; i++)
             {
                 int c = random.Next(caracteres.Length);
-                stringBuilder.Append(caracteres[i]);
+                stringBuilder.Append(caracteres[c]);
             }
             
             return stringBuilder.ToString();

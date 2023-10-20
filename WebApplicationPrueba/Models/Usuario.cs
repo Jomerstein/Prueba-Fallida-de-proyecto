@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplicationPrueba.Models
 {
@@ -7,10 +8,11 @@ namespace WebApplicationPrueba.Models
         public string nombre { get; set; }
         public string apellido { get; set; }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idUsuario { get; set; }
         public string email { get; set; }
         public string contrasenia { get; set; }
-
+        
         public List<Entrada> entradasUsuario { get; set; }
         public List<Espectaculo> espectaculosUsuario { get; set; }
 
